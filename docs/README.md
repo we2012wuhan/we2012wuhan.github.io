@@ -2,7 +2,7 @@
 
 > An awesome project.
 
-hello docsify11111ds
-hello docsify11111ds1232132321432测试说明情况
+hello docsify 一个神奇的网站
+
 
 [>>操作指南](guide)
