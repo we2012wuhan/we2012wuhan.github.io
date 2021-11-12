@@ -7,7 +7,8 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+
+
 
 
 </head>
@@ -25,66 +26,50 @@
       loadNavbar: true,
       coverpage: true,
       onlyCover: true,
-      subMaxLevel:6,
-     executeScript: true,
-      footer: {
-        copy: '互联网是有记忆的，我想留下一些成长的脚印。 —— <a href="https://www.cnblogs.com/bytesfly/" target="_blank">在水一方</a><br/><br/>',
-        pre: '<hr/>',
-        style: 'text-align: left;',
+      subMaxLevel: 6,
+      executeScript: true,
+      // search : [
+      //   '/README.md',            // => /README.md
+      // ],
+      // // 完整配置参数
+      search: {
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+        paths: 'auto', // or 'auto'
+        placeholder: '🔍 搜索',
+        // 搜索标题的最大层级, 1 - 6
+        depth: 3,
+        // 支持本地化
+        noData: '😒 找不到结果',
+        //
+        //   // 搜索标题的最大层级, 1 - 6
+        //
+        //   hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
+        //
+        //   // 避免搜索索引冲突
+        //   // 同一域下的多个网站之间
+        //   namespace: 'website-1',
+        //
+        //   // 使用不同的索引作为路径前缀（namespaces）
+        //   // 注意：仅适用于 paths: 'auto' 模式
+        //   //
+        //   // 初始化索引时，我们从侧边栏查找第一个路径
+        //   // 如果它与列表中的前缀匹配，我们将切换到相应的索引
+        //   pathNamespaces: ['/zh-cn', '/ru-ru', '/ru-ru/v1'],
+        //
+        //   // 您可以提供一个正则表达式来匹配前缀。在这种情况下，
+        //   // 匹配到的字符串将被用来识别索引
+        //   pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/
+        //
+        // }
       }
-
-
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 
-<style>
-
-  /*侧边栏*/
-  .sidebar {
-    padding-top: 6px;
-  }
-
-  aside.sidebar ul li {
-    margin: 0;
-    position: relative;
-  }
-
-  aside.sidebar ul li ul {
-    margin: 6px 0;
-  }
-
-  aside.sidebar ul li p {
-    padding-left: 22px;
-    font-size: 18px;
-    font-weight: normal;
-  }
-
-  aside.sidebar ul li a {
-    line-height: 35px;
-    font-size: 14px;
-    padding: 3px 0 3px 22px;
-  }
-
-  aside.sidebar ul li.active > a {
-    font-size: 16px !important;
-  }
-
-  aside.sidebar ul li.active > a:before {
-    content: '' !important;
-    position: absolute !important;
-    margin: 0 !important;
-    width: 10px !important;
-    height: 10px !important;
-    top: 15px !important;
-    left: 0px !important;
-    border-radius: 50% !important;
-    background-color: #fed24a !important;
-    box-shadow: 0 0 0 3px rgba(254, 210, 74, 0.4) !important;
-  }
-
-
-</style>
 </body>
+
+
 </html>
