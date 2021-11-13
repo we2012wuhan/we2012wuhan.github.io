@@ -11,9 +11,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="stylesheet" href="https://wugenqiang.js.org/src/css/iconfont.css">
-
+<!--  sidebar树可折叠引入的插件-->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />
+<!--  引入mermaid-->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+  <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <!--  字数统计-->
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
 </head>
@@ -23,7 +26,10 @@
 
 
   </div>
+
   <script>
+    var num = 0;
+    mermaid.initialize({ startOnLoad: false });
     window.$docsify = {
       logo: 'image/sidelogo.svg',
       name: '',
@@ -53,21 +59,21 @@
       disqus: 'shortname',
       externalLinkTarget: '_blank', //外链打开方式：_blank表示在新标签页中打开
       sidebarDisplayLevel: 3,
-      plugins: [
-        function(hook) {
-          var footer = [
-            '<hr/>',
-            '<footer>',
-            // '<span><a href="https://github.com/QingWei-Li">cinwell</a> &copy;</span>',
-            '<span>@2021在水一方</span>',
-            '</footer>'
-          ].join('');
-
-          hook.afterEach(function(html) {
-            return html + footer;
-          });
-        }
-      ],
+      // plugins: [
+      //   function(hook) {
+      //     var footer = [
+      //       '<hr/>',
+      //       '<footer>',
+      //       // '<span><a href="https://github.com/QingWei-Li">cinwell</a> &copy;</span>',
+      //       '<span>@2021在水一方</span>',
+      //       '</footer>'
+      //     ].join('');
+      //
+      //     hook.afterEach(function(html) {
+      //       return html + footer;
+      //     });
+      //   }
+      // ],
       count:{
         countable:true,
         fontsize:'0.9em',
@@ -78,7 +84,22 @@
           minute: ""
         },
         isExpected: true
-      }
+      },
+      mergeNavbar: true,//Navbar将在小屏幕上与侧边栏合并
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            // 判断语言是否为 mermaid
+            if (lang === "mermaid") {
+              // 将div 返回
+              return (
+                      '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+              );
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      },
 
     }
   </script>
@@ -91,6 +112,7 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
 
+<!--  sidebar结构树可折叠的js引入-->
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 
 
