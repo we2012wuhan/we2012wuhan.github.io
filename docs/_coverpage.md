@@ -13,7 +13,7 @@
 ## 记录是一种习惯
 
 [北京初雪](https://live.baidu.com/m/media/pclive/pchome/live.html?room_id=4948155857&source=search)
-[Get Started](README.md)
+[开始阅读](README.md)
 
 
 
