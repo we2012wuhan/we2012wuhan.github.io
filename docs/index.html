@@ -20,8 +20,6 @@
 
 
 
-  <!-- 复制代码到剪贴板 -->
-  <script src="//unpkg.com/docsify-copy-code"></script>
 
 </head>
 <body>
@@ -42,7 +40,7 @@
       loadNavbar: true,
       coverpage: true,
       onlyCover: true,
-      subMaxLevel: 6,
+      subMaxLevel: 3,
       executeScript: true,
       auto2top: true,
       // search : [
@@ -62,7 +60,8 @@
       },
       disqus: 'shortname',
       externalLinkTarget: '_blank', //外链打开方式：_blank表示在新标签页中打开
-      sidebarDisplayLevel: 3,
+      sidebarDisplayLevel: 2,
+
       // plugins: [
       //   function(hook) {
       //     var footer = [
@@ -83,7 +82,14 @@
         fontsize:'0.9em',
         color:'rgb(90,90,90)',
         language:'chinese',
+        localization: {
+          words: "",
+          minute: ""
+        },
+        isExpected: true
+
       },
+
       mergeNavbar: true,//Navbar将在小屏幕上与侧边栏合并
       markdown: {
         renderer: {
@@ -100,6 +106,7 @@
         }
       },
       hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
+      notFoundPage: '404.md',
 
 
     }
@@ -125,6 +132,14 @@
 
   <!--  字数统计-->
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+
+<!--  复制到剪贴板-->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+<!--引入emoji-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+
+<!--图片缩放-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 
 
   <script type="text/javascript">
