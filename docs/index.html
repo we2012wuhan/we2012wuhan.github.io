@@ -142,6 +142,7 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 
 
+
   <script type="text/javascript">
     $(document).ready(function () {
       $.goup({
@@ -152,6 +153,12 @@
         titleAsText: true
       });
     });
+  </script>
+
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
   </script>
 </body>
 

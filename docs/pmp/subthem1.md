@@ -31,8 +31,13 @@ $\color{#4285f4}{G}\color{#ea4335}{o}\color{#fbbc05}{o}\color{#4285f4}{g}\color{
      F[竖向流程图]
  ```
 ***
-<audio controls="controls">
- <source src="https://auditprogram.oss-cn-beijing.aliyuncs.com/2021/5/4/vaiJN0J62P5dM0u.mp3?versionId=CAEQGBiBgMDLsILVyRciIGUzYjU1NjhmYTExNzQ1ZjNhYzllNDZlMWQ3NWY3ZmIy" type="audio/ogg" />
-        歌曲
-</audio>
 
+[测试](//music.163.com/outchain/player?type=2&id=189315&auto=1&height=66':include')
+
+<details>
+<summary>自我评价（点击展开）</summary>
+
+- Abc
+- Abc
+
+</details>
