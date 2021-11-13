@@ -14,7 +14,8 @@
 
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />
-
+<!--  字数统计-->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
 </head>
 <body>
   <div id="app">
@@ -51,7 +52,34 @@
       },
       disqus: 'shortname',
       externalLinkTarget: '_blank', //外链打开方式：_blank表示在新标签页中打开
-      sidebarDisplayLevel: 3
+      sidebarDisplayLevel: 3,
+      plugins: [
+        function(hook) {
+          var footer = [
+            '<hr/>',
+            '<footer>',
+            // '<span><a href="https://github.com/QingWei-Li">cinwell</a> &copy;</span>',
+            '<span>@2021在水一方</span>',
+            '</footer>'
+          ].join('');
+
+          hook.afterEach(function(html) {
+            return html + footer;
+          });
+        }
+      ],
+      count:{
+        countable:true,
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese',
+        localization: {
+          words: "",
+          minute: ""
+        },
+        isExpected: true
+      }
+
     }
   </script>
   <!-- Docsify v4 -->
@@ -64,6 +92,25 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
 
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/jquery.goup.js"></script>
+
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.goup({
+        trigger: 100,
+        bottomOffset: 52,
+        locationOffset: 25,
+        //title: 'TOP',
+        titleAsText: true
+      });
+    });
+  </script>
 </body>
 
 

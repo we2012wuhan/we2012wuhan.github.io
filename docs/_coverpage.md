@@ -17,5 +17,6 @@
 
 
 
-![](image/background.png)
+
+![](blogbackground.gif)
 
