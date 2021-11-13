@@ -1,5 +1,6 @@
-- [<span class="iconfont icon-book3"></span> 首页](https://bytesfly.vercel.app/)
+- [<span class="iconfont icon-book3"></span> 优秀案例](https://bytesfly.vercel.app/)
 - [<span class="iconfont icon-icon_fabu"></span> 导航](README.md)
+- ✡️[读书笔记](README.md)
   - [Java](README?id=Java)
   - [大数据](README?id=大数据)
   - [Python](README?id=Python)

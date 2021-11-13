@@ -7,7 +7,7 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-
+  <link rel="stylesheet" href="https://wugenqiang.js.org/src/css/iconfont.css">
 
 
 
@@ -20,6 +20,7 @@
   </div>
   <script>
     window.$docsify = {
+      logo: 'image/sidelogo.svg',
       name: '',
       repo: '',
       loadSidebar: true,
@@ -28,6 +29,7 @@
       onlyCover: true,
       subMaxLevel: 6,
       executeScript: true,
+      auto2top: true,
       // search : [
       //   '/README.md',            // => /README.md
       // ],
@@ -37,13 +39,14 @@
         paths: 'auto', // or 'auto'
         placeholder: '🔍 搜索',
         // 搜索标题的最大层级, 1 - 6
-        depth: 3,
+        depth: 5,
         // 支持本地化
         noData: '😒 找不到结果',
 
 
       },
-      disqus: 'shortname'
+      disqus: 'shortname',
+      externalLinkTarget: '_blank', //外链打开方式：_blank表示在新标签页中打开
     }
   </script>
   <!-- Docsify v4 -->
@@ -54,7 +57,6 @@
 <!--   代码高亮-->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
-
 </body>
 
 
