@@ -22,7 +22,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
   steps:
-    - uses: hengkx/ssh-deploy@v1.0.1
+    - uses: hengkx/ssh-deploy
       env:
         HOST: ${{ secrets.DC_HOST }}
         USERNAME: ${{ secrets.DC_USER }}
